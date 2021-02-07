@@ -18,6 +18,8 @@ public class AvatarState extends AvatarAbility {
 	private boolean speedEnabled;
 	private boolean resistanceEnabled;
 	private boolean fireResistanceEnabled;
+	private boolean glowing;
+	private int glowingpower;
 	private int regenPower;
 	private int speedPower;
 	private int resistancePower;
@@ -50,6 +52,8 @@ public class AvatarState extends AvatarAbility {
 		this.duration = getConfig().getLong("Abilities.Avatar.AvatarState.Duration");
 		this.cooldown = getConfig().getLong("Abilities.Avatar.AvatarState.Cooldown");
 		this.factor = getConfig().getDouble("Abilities.Avatar.AvatarState.PowerMultiplier");
+		this.glowing = getConfig().getBoolean("Abilities.Avatar.AvatarState.PotionEffects.Glowing.Enabled");
+		this.glowingpower = getConfig().getInt("Abilities.Avatar.AvatarState.PotionEffects.Glowing.Power");
 
 		playAvatarSound(player.getLocation());
 
@@ -91,6 +95,9 @@ public class AvatarState extends AvatarAbility {
 		}
 		if (this.fireResistanceEnabled) {
 			this.addProgressPotionEffect(PotionEffectType.FIRE_RESISTANCE, this.fireResistancePower);
+		}
+		if (this.glowing) {
+			this.addProgressPotionEffect(PotionEffectType.GLOWING, this.glowingpower);
 		}
 	}
 

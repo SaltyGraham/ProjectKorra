@@ -671,6 +671,8 @@ public class ConfigManager {
 			config.addDefault("Abilities.Avatar.AvatarState.PotionEffects.DamageResistance.Power", 3);
 			config.addDefault("Abilities.Avatar.AvatarState.PotionEffects.FireResistance.Enabled", true);
 			config.addDefault("Abilities.Avatar.AvatarState.PotionEffects.FireResistance.Power", 3);
+			config.addDefault("Abilities.Avatar.AvatarState.PotionEffects.Glowing.Enabled", true);
+			config.addDefault("Abilities.Avatar.AvatarState.PotionEffects.Glowing.Power", 3);
 			config.addDefault("Abilities.Avatar.AvatarState.PowerMultiplier", 2);
 			config.addDefault("Abilities.Avatar.AvatarState.PlaySound", true);
 			config.addDefault("Abilities.Avatar.AvatarState.Sound.Sound", "BLOCK_ANVIL_LAND");
